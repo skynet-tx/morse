@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="morseApp" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Morse</title>
+	<link href="accets/css/main.css" type="text/css" rel="stylesheet">
+
+	<!-- core -->
+	<script src="js/core/angular.min.js"></script>
+	<script src="js/core/angular-sanitize.min.js"></script>
+
+	<!--main scripts-->
+	<script src="js/app/app.js"></script>
+
+	<!--application-->
+	<script src="js/app/home/home_ctrl.js"></script>
+
+
+</head>
+<body>
+	<div class="container" ng-controller="HomeCtrl">
+		<ng-include src="'js/partials/home.html'"></ng-include>
+	</div>
+</body>
+</html>
