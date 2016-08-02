@@ -13,14 +13,19 @@
 	<!--main scripts-->
 	<script src="js/app/app.js"></script>
 
+	<!--constants-->
+	<script src="js/app/dictionary.js"></script>
+
+	<!--services-->
+	<script src="js/app/services/morse_obj.js"></script>
+
 	<!--application-->
 	<script src="js/app/home/home_ctrl.js"></script>
 
-
 </head>
 <body>
-	<div class="container" ng-controller="HomeCtrl">
-		<ng-include src="'js/partials/home.html'"></ng-include>
-	</div>
+<div class="container" ng-controller="HomeCtrl">
+	<ng-include src="'js/partials/home.html'" onload="load()"></ng-include>
+</div>
 </body>
 </html>

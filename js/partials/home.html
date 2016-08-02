@@ -2,14 +2,37 @@
 	<div class="col-md-2"></div>
 	<div class="col-md-8">
 		<div class="panel panel-default">
-			<div class="panel-heading"><h1>Morse code</h1></div>
+			<div class="panel-heading"><h1>Type your message</h1></div>
 			<div class="panel-body">
 				<form>
 					<div class="form-group">
 						<label class="text-info" for="inputString">Input string</label>
-						<input type="text" class="form-control" id="inputString" placeholder="Input string">
+						<input type="text" class="form-control" id="inputString" placeholder="Input your string">
+					</div>
+					<div class="form-group">
+						<button  ng-click="onEncryptBtn" id="encrypt-btn" type="button" class="btn btn-primary">Encrypt</button>
 					</div>
 				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2"></div>
+</div>
+<div class="row"> 
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h1>Output morse code</h1></div>
+			<div class="panel-body">
+				<div class="well">Words are separated by / <div class="pull-right">Words: <span class="badge">{{words}}</span></div></div>
+				<div class="bg-warning outputStr">
+					<span ng-repeat="letters in outputMsg track by $index">
+						<span ng-repeat="letter in letters track by $index">
+							{{letter}}&nbsp;
+						</span>
+						<span ng-if="!$last">&nbsp;/&nbsp;</span>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
